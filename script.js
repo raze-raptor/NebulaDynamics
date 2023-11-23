@@ -24,8 +24,50 @@ document.addEventListener('keydown', (event) => {
   konamiCode.push(event.key);
   konamiCode = konamiCode.slice(-secretCode.length);
 
+
+  
   if (JSON.stringify(konamiCode) === JSON.stringify(secretCode)) {
     // Activate the easter egg
     window.location.href = 'secret.html';
   }
 });
+
+
+// Check for the secret command in the console
+window.addEventListener('DOMContentLoaded', () => {
+  console.log('Type "mat()" in the console for an Easter egg!');
+});
+
+function activateEasterEgg() {
+  // Redirect to the secret.html page
+  window.location.href = 'secret.html';
+}
+
+// Check for the secret command in the console
+window.addEventListener('DOMContentLoaded', () => {
+  console.log('Type "mat()" in the console for an Easter egg!');
+  checkConsoleCommands();
+});
+
+function checkConsoleCommands() {
+  const consoleInput = [];
+  let consoleTimer;
+
+  function processCommand() {
+    const command = consoleInput.join('').trim();
+    if (command === secretCommand) {
+      // If mat() is typed, activate the same easter egg
+      activateEasterEgg();
+    }
+    consoleInput.length = 0;
+  }
+
+  // Capture console input
+  window.addEventListener('keydown', (event) => {
+    if (event.key.length === 1) {
+      consoleInput.push(event.key);
+      clearTimeout(consoleTimer);
+      consoleTimer = setTimeout(processCommand, 500);
+    }
+  });
+}
