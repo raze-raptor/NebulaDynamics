@@ -1,37 +1,181 @@
+/* Updated styles.css */
+
 body {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    margin: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5; /* Light grey background */
 }
 
-.title-bar {
-    background-color: #333;
-    padding: 10px;
-    text-align: center;
+.mac-window {
+  width: 80%;
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #444; /* Dark grey window background */
+  border: 1px solid #555; /* Slightly darker border */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+  color: #fff; /* White text color */
 }
 
-.app-title {
-    font-size: 1.5em;
+.window-bar {
+  background-color: #555; /* Darker grey window bar background */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.window-buttons {
+  display: flex;
+}
+
+.button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 5px;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.red { background-color: #d9534f; } /* Darker red */
+.yellow { background-color: #f0ad4e; } /* Darker yellow */
+.green { background-color: #5cb85c; } /* Darker green */
+
+.button:hover {
+  transform: scale(1.2); /* Scale effect on hover */
+}
+
+.window-title {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .content {
-    padding: 20px;
+  padding: 30px;
 }
 
-.footer-bar {
-    background-color: #333;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+.section {
+  margin-bottom: 20px; /* Adjusted spacing */
 }
 
-.footer-bar p {
-    color: #999; /* Adjust the color for the copyright text */
-    font-size: 0.8em; /* Adjust the font size for the copyright text */
+.offer-item {
+  position: relative; /* Added to create stacking context */
+  z-index: 1; /* Added to ensure it's above the background */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
-/* Add any additional styles as needed */
+.offer-item:hover {
+  transform: translateY(-5px); /* Move up slightly on hover */
+  z-index: 2; /* Bring the hovered item to the top */
+}
 
+h2 {
+  color: #fff; /* White section title color */
+}
+
+p {
+  color: #ccc; /* Grey text color */
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.profile img:hover {
+  animation: spin 1s linear infinite; /* Spin animation on hover */
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.image-slider {
+  position: relative;
+}
+
+.slider-container {
+  display: flex;
+  overflow-x: hidden;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.slider-controls {
+  position: relative; /* Removed absolute positioning */
+  display: flex;
+  justify-content: space-between;
+}
+
+.control-box {
+  width: 30%;
+  background-color: #555; /* Darker grey box background */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.box-content {
+  padding: 5px;
+  text-align: center;
+}
+
+.box-content img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.box-content p {
+  margin-top: 10px;
+}
+
+.media-icons {
+  display: flex;
+  margin-top: 20px; /* Added margin to separate from other sections */
+}
+
+.media-icons i {
+  width: 30px; /* Adjust the size as needed */
+  margin-right: 10px;
+}
+
+/* Added styles for tiny boxes */
+.tiny-box {
+  width: 20px;
+  height: 20px;
+  background-color: #555;
+  border-radius: 3px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.media-link {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.media-link:hover {
+  color: #fff; /* Change color on hover */
+}
