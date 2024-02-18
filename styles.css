@@ -193,15 +193,5 @@ p {
 }
 
 .legal-info p {
-  color: #ccc; /* Grey text color */
   margin: 10px 0; /* Adjust top and bottom margin */
-}
-
-.legal-info a {
-  color: #1E90FF; /* Link color */
-  text-decoration: underline; /* Underline links */
-}
-
-.legal-info a:hover {
-  color: #00BFFF; /* Darker blue on hover */
 }
