@@ -171,13 +171,13 @@ p {
 }
 
 .media-link {
-  color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  color: #1E90FF; /* Change link color */
+  text-decoration: underline; /* Underline links */
+  transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
 .media-link:hover {
-  color: #fff; /* Change color on hover */
+  color: #00BFFF; /* Darker blue on hover */
 }
 
 /* Added styles for invisible footer */
