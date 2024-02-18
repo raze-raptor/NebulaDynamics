@@ -182,7 +182,7 @@ p {
 
 /* Legal Information styling */
 .legal-info {
-  margin-top: 30px; /* Adjust spacing from content */
+  margin-top: 20px; /* Adjust spacing from content */
   padding: 20px; /* Add padding for readability */
   background-color: #333; /* Darker background for contrast */
   border-radius: 10px; /* Rounded corners */
@@ -194,6 +194,7 @@ p {
 
 .legal-info p {
   color: #ccc; /* Grey text color */
+  margin: 10px 0; /* Adjust top and bottom margin */
 }
 
 .legal-info a {
