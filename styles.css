@@ -179,3 +179,13 @@ p {
 .media-link:hover {
   color: #fff; /* Change color on hover */
 }
+
+/* Added styles for invisible footer */
+#copyright {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: transparent; /* Make the text invisible */
+    text-align: center;
+}
